@@ -2,11 +2,12 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
-    "prettier": "npx prettier --write ."
+    "start": "node app.js",
+    "prettier": "npx prettier --write .",
+    "start:dev": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",

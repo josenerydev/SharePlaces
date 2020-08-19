@@ -1,0 +1,6 @@
+{
+  "env": {
+    "PORT": 5000,
+    "MONGO_URI": "mongodb+srv://josenerydev:Qazplm27@cluster0.ol3ev.mongodb.net/places-app?retryWrites=true&w=majority"
+  }
+}

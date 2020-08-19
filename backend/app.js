@@ -23,5 +23,7 @@ mongoose
     useUnifiedTopology: true,
     useCreateIndex: true,
   })
-  .then((conn) => app.listen(process.env.PORT))
+  .then((conn) => {
+    app.listen(process.env.PORT);
+  })
   .catch((err) => console.error(err));

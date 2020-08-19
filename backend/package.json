@@ -4,18 +4,19 @@
   "description": "",
   "main": "app.js",
   "engines": {
-    "node": "12.16.1"
+    "node": "12.x.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "set NODE_ENV=production&& node -r dotenv-flow/config app.js",
     "prettier": "npx prettier --write .",
-    "start:dev": "nodemon app.js"
+    "dev": "set NODE_ENV=development&& nodemon -r dotenv-flow/config app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv-flow": "^3.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.0",
     "mongoose-unique-validator": "^2.0.3"

@@ -1,10 +1,10 @@
 @hostname = localhost
 @port = 5000
 @host = {{hostname}}:{{port}}
-
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjNlN2I3ODBhMjU1NzQxYzhlNmVmOWYiLCJlbWFpbCI6Impvc2VuZXJ5ZGV2QGdtYWlsLmNvbSIsImlhdCI6MTU5NzkzMDM2MCwiZXhwIjoxNTk3OTMzOTYwfQ.elU1BoDbEodPsDkRFSlnln8qd44UHmRILXxEduJq5Iw
 ###
 
-GET http://{{host}}/api/places/5f3c98251ca4f919bc005235 HTTP/1.1
+GET http://{{host}}/api/places/5f3e7d05ef40094208c13088 HTTP/1.1
 
 ###
 
@@ -14,10 +14,26 @@ GET http://{{host}}/api/places/user/5f3c98091ca4f919bc005234 HTTP/1.1
 
 POST http://{{host}}/api/places HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
   "title": "Some place",
   "description": "Beatiful place",
-  "address": "Some address",
-  "userId": "5f3c98091ca4f919bc005234"
+  "address": "rua maria soares"
 }
+
+###
+
+PATCH  http://{{host}}/api/places/5f3e7d05ef40094208c13088 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "title": "Update place",
+  "description": "Beatiful place"
+}
+
+###
+
+DELETE http://{{host}}/api/places/5f3e7d05ef40094208c13088 HTTP/1.1
+Authorization: Bearer {{token}}
